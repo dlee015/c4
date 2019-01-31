@@ -119,8 +119,8 @@
 	function createGrid(x){
 	var grid = clickableGrid(x,function(el,row,col,i){
 		
-		console.log("Sending run job as:",x[row][0]+col)
-		ws.send(JSON.stringify({func:".c4.run",arg:x[row][0]+col}));	
+		console.log("Sending run job as:",x[row][0].split(">")[1][0]+col)
+		ws.send(JSON.stringify({func:".c4.run",arg:x[row][0].split(">")[1][0]+col}));	
 		el.className='clicked';
 		if (lastClicked) lastClicked.className='';
 		lastClicked = el;

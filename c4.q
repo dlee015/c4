@@ -65,6 +65,7 @@ validation:{$[first exec turn from tab where h in neg[.z.w];
             [
 			neg[.z.w]  wrapGrid`;
             if[(not x[0] in 19#.Q.A) or not x[1] in 1+til[20];
+				.debug.x:x;
                 :neg[.z.w] tryAgain`
               ];
               
